@@ -35,6 +35,7 @@ for (const div of allDiv) {
         const makePayBtn = document.getElementById('make-pay');
         if(totalPay >= 0){
             makePayBtn.removeAttribute('disabled')
+            
         }
         if (totalPay >= 200)(
             couponBtn.removeAttribute('disabled')
@@ -68,9 +69,20 @@ document.getElementById('go-home').addEventListener('click',function(){
     setValue ('total', defultValue);
     setValue ('discount-price', defultValue)
     const productContainer = document.getElementById('product-container');
-    console.log(productContainer)
     while (productContainer.firstChild) {
         productContainer.removeChild(productContainer.firstChild);
     }
+
+    const makePayBtn = document.getElementById('make-pay');
+    const totalPrice = getNumber('total-price');
+    console.log(totalPrice)
+    const couponBtn = document.getElementById('coupon-btn');
+    if(totalPrice == 0){
+        makePayBtn.setAttribute('disabled','')
+        
+    }
+    if (totalPrice < 200)(
+        couponBtn.setAttribute('disabled','')
+    )
     count = 0; 
 })
