@@ -459,7 +459,7 @@
             </div>
             <div class="bg-white mt-5 px-5 py-7 rounded-lg">
               <div id="product-container" class="text-xl font-semibold">
-               
+                
               </div>
               <div class="border border-x-0 border-gray-300 my-5 py-2">
                 <p class="text-xl font-semibold">
@@ -473,13 +473,31 @@
               </div>
             </div>
             <div class="-mt-6 text-center">
-              <button id="make-pay"
+              <button onclick="my_modal_1.showModal()" id="make-pay"
                 class="px-7 btn text-xl font-semibold text-white btn-primary bg-pink-500 border-0 hover:bg-pink-600 " disabled
               >
                 Make Purchase
               </button>
             </div>
           </div>
+          <dialog id="my_modal_1" class="modal">
+            <form method="dialog" class="modal-box">
+              <div class="text-center justify-center">
+                <img class="mx-auto lg:w-3/4" src="./images/congo.png">
+                <h3 class="font-bold text-2xl">Congratulations</h3>
+                <p class="py-4">Your Purchase the product</p>
+              </div>
+              <div class="modal-action justify-center">
+                <!-- if there is a button in form, it will close the modal -->
+                <button id="go-home"
+                class="btn text-xl font-semibold text-white btn-primary bg-pink-500 border-0 hover:bg-pink-600"
+              >
+                Go Home
+              </button>
+              </div>
+            </form>
+          </dialog>
+
           <!-- Right side container end-->
         </div>
       </section>

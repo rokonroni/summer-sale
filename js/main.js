@@ -55,9 +55,22 @@ document.getElementById('coupon-btn').addEventListener('click', function(){
     const totalMoney = totalPrice - parseFloat(disPrice);
     const money = totalMoney.toFixed(2);
     setValue ('total', money)
+    couponInput.value = ""
     }
     else {
         alert ('Please input a valid Coupon')
     }
 })
 
+document.getElementById('go-home').addEventListener('click',function(){
+    const defultValue = '0.00';
+    setValue ('total-price', defultValue);
+    setValue ('total', defultValue);
+    setValue ('discount-price', defultValue)
+    const productContainer = document.getElementById('product-container');
+    console.log(productContainer)
+    while (productContainer.firstChild) {
+        productContainer.removeChild(productContainer.firstChild);
+    }
+    count = 0; 
+})
