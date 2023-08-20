@@ -445,13 +445,13 @@
             <div class="bg-white p-5 rounded-lg mt-14">
               <h3 class="font-semibold text-xl mb-3">Have coupon?</h3>
               <div class="join">
-                <input
+                <input id="coupon"
                   type="text"
-                  class="input input-bordered join-item"
+                  class="input input-bordered join-item focus:outline-0"
                   placeholder="Coupon code"
                 />
-                <button
-                  class="btn bg-pink-500 text-white hover:bg-pink-600 join-item rounded-r-lg btn-disabled"
+                <button id="coupon-btn"
+                  class="btn bg-pink-500 text-white hover:bg-pink-600 join-item rounded-r-lg " disabled 
                 >
                   Apply
                 </button>
@@ -466,15 +466,15 @@
                   Total price: <span id="total-price" class="text-gray-400">0.00</span><span class="text-gray-400"> TK</span>
                 </p>
                 <p class="text-xl font-semibold">
-                  Discount: <span id="total-price" class="text-gray-400">0.00</span><span class="text-gray-400"> TK</span>
+                  Discount: <span id="discount-price" class="text-gray-400">0.00</span><span class="text-gray-400"> TK</span>
                 </p>
-                <p class="text-xl font-semibold">Total: <span id="total-price" class="text-gray-400">0.00</span><span class="text-gray-400"> TK</span>
+                <p class="text-xl font-semibold">Total: <span id="total" class="text-gray-400">0.00</span><span class="text-gray-400"> TK</span>
                 </p>
               </div>
             </div>
             <div class="-mt-6 text-center">
-              <button
-                class="px-7 btn text-xl font-semibold text-white btn-primary bg-pink-500 border-0 hover:bg-pink-600 btn-disabled"
+              <button id="make-pay"
+                class="px-7 btn text-xl font-semibold text-white btn-primary bg-pink-500 border-0 hover:bg-pink-600 " disabled
               >
                 Make Purchase
               </button>
